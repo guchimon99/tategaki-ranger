@@ -32,5 +32,8 @@ export default function verticalizer (text) {
     }).join("")
   })
 
-  return vLines.join("\n")
+  var verticalized = vLines.join("\n")
+  verticalized = verticalized.replace(/^　/, "．")
+
+  return verticalized
 }
