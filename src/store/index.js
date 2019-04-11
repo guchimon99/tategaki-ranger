@@ -11,7 +11,11 @@ we will rock you`,
 情に棹させば流される。
 意地を通せば窮屈だ。`,
 `I'll show you
-The Good Feature.`]
+The Good Feature.`,
+`雀の子
+そこのけそこのけ
+お馬が通る
+　　　　　小林一茶`]
 
 const store = {
   debug: true,
