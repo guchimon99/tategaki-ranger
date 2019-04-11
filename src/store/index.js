@@ -1,7 +1,8 @@
-const DEFAULT_TEXT = `a-b-c
-引きずる笑顔が
-200kgで
-右手を刺す`
+const DEFAULT_TEXT = `山路を登りながら、こう考えた。
+智に働けば角が立つ。
+情に棹させば流される。
+意地を通せば窮屈だ。
+とかくに人の世は住みにくい。`
 
 const store = {
   debug: true,
