@@ -28,19 +28,25 @@ export default {
 
 <style scoped lang="scss">
   .generator{
-    width: 100%;
-    height: 100vh;
     display: flex;
     flex-direction: column;
     &__input {
+      border-radius: 0.2rem;
+      margin-top: 1rem;
       padding: 1rem;
       width: 100%;
-      resize: horizontal;
+      resize: none;
       flex-grow: 1;
+      height: 50%;
+      border: none;
+      &:focus {
+        outline: none;
+      }
     }
     &__preview{
       padding: 1rem;
       flex-grow: 1;
+      height: 50%;
       white-space: pre;
     }
   }

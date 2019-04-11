@@ -2,30 +2,35 @@
   <div id="app" class="app">
     <Generator
       v-on:update-text="updateTextHandler"
-      v-bind:default-text="text"
-      v-bind:preview="preview" />
+      v-bind:default-text="store.text"
+      v-bind:preview="verticalized" />
+    <Tweeter
+      v-bind:text="verticalized" />
   </div>
 </template>
 
 <script>
 import verticalizer from './libraries/verticalizer'
 import store from './store'
+
 import Generator from './components/Generator.vue'
+import Tweeter from './components/Tweeter.vue'
 
 export default {
   name: 'app',
   data: function(){
     return {
-      text: store.state.text
+      store: store.state,
     }
   },
   computed: {
-    preview: function(){
-      return verticalizer(this.text)
+    verticalized: function(){
+      return verticalizer(this.store.text)
     }
   },
   components: {
-    Generator
+    Generator,
+    Tweeter
   },
   methods: {
     updateTextHandler: function(text){
@@ -35,7 +40,7 @@ export default {
 }
 </script>
 
-<style>
+<style lang="scss">
 :root {
   font-size: 16px;
 }
@@ -44,7 +49,7 @@ export default {
    box-sizing: border-box;
 }
 
-input, textarea {
+input, textarea, button {
   font-size: 1rem;
 }
 
@@ -52,12 +57,27 @@ body {
   margin: 0;
   background: #FAFAFA;
   font-family: 'M PLUS 1p', sans-serif;
-  width: 100%;
-  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  overflow: hidden;
 }
 
 .app {
   width: 100%;
   height: 100%;
+  display: flex;
+  flex-direction: column;
+  margin: 0 auto;
+  max-width: 40rem;
+  .generator {
+    flex-grow: 1;
+    flex-shrink: 0;
+  }
+  .tweeter {
+    flex-shrink: 0;
+  }
 }
 </style>
