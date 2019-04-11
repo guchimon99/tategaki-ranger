@@ -1,12 +1,9 @@
 const vc = (c) => {
 
-  c = c.replace(/[A-Za-z0-9]/g, function(s) {
-    return String.fromCharCode(s.charCodeAt(0) + 0xFEE0)
-  })
+  c = c.replace(/[!-~]/g, c => String.fromCharCode( c.charCodeAt(0) + 0xFEE0 ))
 
   switch (c) {
     case "," : return "，"
-    case "’" : return " ’"
     case " " : return "　"
     case "-": return "｜"
     case "ー": return "｜"
