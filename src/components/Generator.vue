@@ -7,25 +7,20 @@
 
 <script>
 
-import verticalizer from '../libraries/verticalizer'
-
-const DEFAULT_TEXT = `古池や
-蛙飛びこむ
-水の音`
-
 export default {
   name: 'Generator',
   data: function () {
     return {
-      text: DEFAULT_TEXT
+      text: ""
     }
   },
-  methods: {
-
+  created: function(){
+    this.text = this.defaultText
   },
-  computed: {
-    preview: function () {
-      return verticalizer(this.text)
+  props: ['default-text', 'preview'],
+  watch: {
+    text: function() {
+      this.$emit('update-text', this.text)
     }
   }
 }
