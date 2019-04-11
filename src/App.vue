@@ -11,7 +11,8 @@
       v-bind:text="verticalized" />
     <div class="footer">
       バグの報告とかは <a href="https://twitter.com/guchimon99">@guchimon99</a><br>
-      原案 <a href="https://twitter.com/Ash4Crypto/status/1115994874040311809">しまちょー </a>
+      原案 <a href="https://twitter.com/Ash4Crypto/status/1115994874040311809">しまちょー </a><br>
+      テスター <a href="https://twitter.com/xSaludSaru">xSalud</a>
     </div>
   </div>
 </template>
@@ -89,6 +90,7 @@ body {
     text-align: center;
     color: #333333;
     font-size: 0.8rem;
+    line-height: 1.8;
   }
 }
 </style>
