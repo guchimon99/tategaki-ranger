@@ -2,10 +2,16 @@
   <div id="app" class="app">
     <Generator
       v-on:update-text="updateTextHandler"
-      v-bind:default-text="store.text"
-      v-bind:preview="verticalized" />
+      v-bind:default-text="store.text" />
+    <Preview
+      v-bind:text="verticalized"/>
     <Tweeter
       v-bind:text="verticalized" />
+
+    <div class="footer">
+      バグの報告とかは <a href="https://twitter.com/guchimon99">@guchimon99</a><br>
+      原案 <a href="https://twitter.com/Ash4Crypto/status/1115994874040311809">しまちょー </a>
+    </div>
   </div>
 </template>
 
@@ -15,6 +21,7 @@ import store from './store'
 
 import Generator from './components/Generator.vue'
 import Tweeter from './components/Tweeter.vue'
+import Preview from './components/Preview.vue'
 
 export default {
   name: 'app',
@@ -30,7 +37,8 @@ export default {
   },
   components: {
     Generator,
-    Tweeter
+    Tweeter,
+    Preview
   },
   methods: {
     updateTextHandler: function(text){
@@ -57,27 +65,24 @@ body {
   margin: 0;
   background: #FAFAFA;
   font-family: 'M PLUS 1p', sans-serif;
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  overflow: hidden;
 }
 
 .app {
   width: 100%;
-  height: 100%;
   display: flex;
   flex-direction: column;
   margin: 0 auto;
   max-width: 40rem;
-  .generator {
-    flex-grow: 1;
-    flex-shrink: 0;
+  .generator{
+    margin-bottom: 1rem;
   }
-  .tweeter {
-    flex-shrink: 0;
+
+  .footer {
+    margin-top: 3rem;
+    padding: 1rem 1rem 3rem;
+    text-align: center;
+    color: #333333;
+    font-size: 0.8rem;
   }
 }
 </style>

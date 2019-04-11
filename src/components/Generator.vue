@@ -1,7 +1,6 @@
 <template>
   <div class="generator">
     <textarea class="generator__input" v-model="text"></textarea>
-    <div class="generator__preview">{{preview}}</div>
   </div>
 </template>
 
@@ -35,19 +34,13 @@ export default {
       margin-top: 1rem;
       padding: 1rem;
       width: 100%;
+      min-height: 15rem;
       resize: none;
       flex-grow: 1;
-      height: 50%;
       border: none;
       &:focus {
         outline: none;
       }
-    }
-    &__preview{
-      padding: 1rem;
-      flex-grow: 1;
-      height: 50%;
-      white-space: pre;
     }
   }
 </style>
