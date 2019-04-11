@@ -63,7 +63,7 @@ input, textarea, button {
 
 body {
   margin: 0;
-  background: #FAFAFA;
+  background: #F0F0F0;
   font-family: 'M PLUS 1p', sans-serif;
 }
 
@@ -71,12 +71,15 @@ body {
   width: 100%;
   display: flex;
   flex-direction: column;
+  padding: 1rem 0 0;
   margin: 0 auto;
   max-width: 40rem;
-  .generator{
+  .generator {
     margin-bottom: 1rem;
   }
-
+  .preiew {
+    margin-bottom: 1rem;
+  }
   .footer {
     margin-top: 3rem;
     padding: 1rem 1rem 3rem;

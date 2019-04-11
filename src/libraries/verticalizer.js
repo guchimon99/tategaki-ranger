@@ -5,6 +5,8 @@ const vc = (c) => {
   })
 
   switch (c) {
+    case "," : return "，"
+    case "’" : return " ’"
     case " " : return "　"
     case "-": return "｜"
     case "ー": return "｜"

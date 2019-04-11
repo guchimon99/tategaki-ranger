@@ -64,7 +64,7 @@ export default {
   &__count{
     font-size: 0.8rem;
     padding: 0.5rem 0;
-    color: #CCC;
+    color: #AAAAAA;
     text-align: right;
     &--over{
       span {

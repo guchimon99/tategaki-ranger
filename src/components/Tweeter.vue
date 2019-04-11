@@ -1,6 +1,8 @@
 <template>
   <div class="tweeter">
-    <a v-bind:href="tweetURL" target="_blank" class="tweeter__button">ツイートする</a>
+    <span v-if="!text || text.length < 1" class="tweeter__button tweeter__button--empty">文章を入力してください</span>
+    <a v-else-if="1 <= text.length && text.length <= 140" v-bind:href="tweetURL" target="_blank" class="tweeter__button">ツイートする</a>
+    <span v-else class="tweeter__button tweeter__button--over">140文字を超えています</span>
   </div>
 </template>
 
@@ -31,6 +33,14 @@ export default {
     width: 100%;
     text-decoration: none;
     text-align: center;
+    &--empty {
+      background: #CCC;
+      color: #999;
+    }
+    &--over {
+      color: #FFF;
+      background: #FF0000;
+    }
   }
 }
 </style>
