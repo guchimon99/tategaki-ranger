@@ -7,7 +7,8 @@
       v-bind:text="verticalized"/>
     <Tweeter
       v-bind:text="verticalized" />
-
+    <Copier
+      v-bind:text="verticalized" />
     <div class="footer">
       バグの報告とかは <a href="https://twitter.com/guchimon99">@guchimon99</a><br>
       原案 <a href="https://twitter.com/Ash4Crypto/status/1115994874040311809">しまちょー </a>
@@ -22,6 +23,7 @@ import store from './store'
 import Generator from './components/Generator.vue'
 import Tweeter from './components/Tweeter.vue'
 import Preview from './components/Preview.vue'
+import Copier from './components/Copier.vue'
 
 export default {
   name: 'app',
@@ -38,7 +40,8 @@ export default {
   components: {
     Generator,
     Tweeter,
-    Preview
+    Preview,
+    Copier
   },
   methods: {
     updateTextHandler: function(text){
