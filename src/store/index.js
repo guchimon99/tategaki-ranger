@@ -15,7 +15,7 @@ The Good Feature.`,
 `雀の子
 そこのけそこのけ
 お馬が通る
-　　　　　小林一茶`]
+${'　　　　　'}小林一茶`]
 
 const store = {
   debug: true,

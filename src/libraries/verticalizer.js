@@ -1,3 +1,5 @@
+/* eslint no-irregular-whitespace: ["error", {"skipRegExps": true}] */
+
 const vc = (c) => {
 
   c = c.replace(/[!-~]/g, c => String.fromCharCode( c.charCodeAt(0) + 0xFEE0 ))
