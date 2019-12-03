@@ -15,7 +15,7 @@ const vc = (c) => {
 
 export default function verticalizer (text) {
 
-  const lines = text.split("\n")
+  const lines = text.split("\n").map(l => Array.from(l))
 
   const lineLength = lines.length
   const maxLength = Math.max.apply(null, lines.map(line => line.length))
@@ -25,7 +25,7 @@ export default function verticalizer (text) {
     return rLines.map((line, li) => {
       var c = vc(line[ci] || "　")
       if (li < lineLength - 1) {
-        c += "　"
+        c += line[ci] && line[ci].length > 1 ? "  " : "　"
       }
       return c
     }).join("")
