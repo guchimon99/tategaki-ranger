@@ -9,6 +9,10 @@ const vc = (c) => {
     case " " : return "　"
     case "-": return "｜"
     case "ー": return "｜"
+    case "→": return "↓"
+    case "↓": return "←"
+    case "←": return "↑"
+    case "↑": return "→"
     default : return c
   }
 }
