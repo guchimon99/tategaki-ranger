@@ -1,35 +1,28 @@
-.DS_Store
-node_modules
-/dist
-
-# local env files
-.env.local
-.env.*.local
-
-# Log files
+# Logs
+logs
+*.log
 npm-debug.log*
 yarn-debug.log*
 yarn-error.log*
+pnpm-debug.log*
+lerna-debug.log*
+
+node_modules
+.DS_Store
+dist
+dist-ssr
+coverage
+*.local
+
+/cypress/videos/
+/cypress/screenshots/
 
 # Editor directories and files
+.vscode/*
+!.vscode/extensions.json
 .idea
-.vscode
 *.suo
 *.ntvs*
 *.njsproj
 *.sln
-*.sw*
-
-# Created by https://www.gitignore.io/api/firebase
-# Edit at https://www.gitignore.io/?templates=firebase
-
-### Firebase ###
-.idea
-**/node_modules/*
-**/.firebaserc
-
-### Firebase Patch ###
-.runtimeconfig.json
-.firebase/
-
-# End of https://www.gitignore.io/api/firebase
+*.sw?
